@@ -242,24 +242,276 @@ Grade< 50 - Failed
 // }
 
 //Q14: Write a program to add two dimensional arrays.
-const arraySize = prompt("Enter the size of the both 2D arrays: ");
-const array1 = [];
-const array2 = [];
+// const arraySize = Number(prompt("Enter the size of the both 2D arrays: ")) ;
+// const array1 = [];
+// const array2 = [];
 
-for(let i = 0;i<arraySize;i++){
-    for(let j = 0 ;j<arraySize;j++){
-        array1[i][j] = prompt(` Enter the ${i+1}st element of the first array`);       
+// for(let i = 0;i<arraySize;i++){
+//     array1[i] = [];
+//     for(let j = 0 ;j<arraySize;j++){
+//         array1[i][j] = Number(prompt(` Enter the ${j+1} positioned element of the ${i+1} postioned row of the first array`)) ;       
+//     }
+// }
+
+// for(let i = 0;i<arraySize;i++){
+//     array2[i] = [];
+//     for(let j = 0 ;j<arraySize;j++){
+//         array2[i][j] =Number(prompt(` Enter the ${j+1} positioned element of the ${i+1} positioned row of the second array`)) ;
+//     }
+// }
+
+// const sumArray = [];
+// for(let i=0;i<arraySize;i++){
+//     sumArray[i]=[]
+//     for(let j=0;j<arraySize;j++){
+//         sumArray[i][j] = array1[i][j]+array2[i][j]
+//     }
+// }
+
+// console.log(sumArray);
+
+//Q15:- Write a program to accept an array and disply it on the console using functions. 
+//a: Declare an array
+//b: call function getArray()
+//c: call function displayArray()
+
+//Ans:
+
+// const arraySize = Number(prompt("Enter the size of the array: ")) ;
+// const array = [];
+// function getArray(){
+//     for(let i=0;i<arraySize;i++){
+//         array[i] = Number(prompt(`Enter the ${i+1} positioned element of the array`));
+//     }
+// }
+// function displayArray(){
+//     console.log(array);
+// }
+// getArray();
+// displayArray();
+
+//Q16:- Write a java program to check whether a given number is prime or not.
+
+//Ans:
+// const number = Number(prompt("Enter a number to check if it is prime or not: "));
+// let isPrime=true
+//  if(number===1){
+//         isPrime=false;
+
+// }else{
+//     for(let i = 2;i<number/2;i++){
+   
+//     if(number%i===0){
+//         isPrime=false
+//         break;
+//     }
+// }
+// }
+
+
+// if(isPrime){
+//     console.log("The given number is prime");
+// }else{
+//     console.log("The given number is not a Prime");
+
+// }
+
+//Q17:- Write a menu driven java program to do the basic mathematical operations such as addition, subtraction, multiplication and division
+//a. Program should have 4 functions named addition(), subtraction(), multiplication() and division()
+//b. Should create a class object and call the appropriate function as user prefers in the main function
+
+// const num1 = Number(prompt("Enter the first number"));
+// const num2 = Number(prompt("Enter the second number"));
+// const operation = Number(prompt(
+//     `Choose an operation by number
+//     1. Addition
+//     2. Subtraction
+//     3. Multiplication
+//     4. Division 
+//     `
+    
+// ))
+
+// class Calculate{
+//     addition(a,b){
+//         return a+b;
+//     }
+//     subtraction(a,b){
+//         return a-b;
+//     }
+//     multiplication(a,b){
+//         return a*b;
+//     }
+//     division(a,b){
+//         if(b===0){
+//             return "Division by zero is not allowed"
+//         }else{
+//             return a/b;
+
+//         }
+//     }
+
+// }
+// const calc = new Calculate();
+// switch(operation){
+//     case 1: 
+//         console.log(calc.addition(num1,num2));
+//     break;
+//     case 2:
+//         console.log(calc.subtraction(num1,num2));
+//     break;
+//     case 3:
+//         console.log(calc.multiplication(num1,num2));
+//     break;
+//     case 4:
+//         console.log(calc.division(num1,num2));
+//     break;
+//     default:
+//         console.log("Please enter a optin form the given list")
+// }
+
+//Q18:- Grades are computed using a weighted average. Suppose that the written test counts 70%,  lab exams 20% and assignments 10%.
+// If Arun has a score out of 100 like below
+
+// 81 marks for written test
+// 68 marks for lab exams
+// 92 marks for assignments
+
+//Arun's overall grade = (81x70)/100 + (68x20)/100 + (92x10)/100 = 79.5
+
+//Write a program to find the grade of a student during his academic year. 
+//Program should accept the scores for written test, lab exams and assignments
+//Output the grade of a student (using weighted average)
+
+//Ans:
+// const writtenTest = Number(prompt("Enter the written test mark to find the grade: "));
+// const labTest = Number(prompt("Enter the lab exam mark to find the grade: "));
+// const assignmentTest = Number(prompt("Enter the assignment mark to find the grade: "));
+
+// if(Number.isNaN(writtenTest)||Number.isNaN(labTest)|| Number.isNaN(assignmentTest)){
+//     alert("Please enter valid numeric marks");
+// }else if(writtenTest<0 || writtenTest>100||labTest<0 || labTest>100||assignmentTest<0 || assignmentTest>100){
+//     alert("Please enter valid mark between 0 and 100");
+// }else{
+    
+// const finalGrade = (70*(writtenTest/100))+(20*(labTest/100))+(10*(assignmentTest/100));
+// alert(`Final grade for the year ${finalGrade}`);
+
+// }
+
+//Q19:- write a program to print the following pattern using for loop.
+
+/*
+1
+2	3
+4	5	6
+7	8	9	10
+*/
+// let count = 0
+// for(let i = 1;i<=4;i++){
+//     for(let j=1;j<=i;j++){
+//         process.stdout.write(` ${++count}`)
+//     }
+//     console.log("");
+// }
+//Q20:- Write a program to multiply the adjacent values of an array and store it in an another array
+
+// const array = [1,2,3,4,5];
+
+// const newArray = [];//2	6	12	20
+
+// for(let i=0;i<array.length-1;i++){
+//     newArray[i]=array[i]*array[i+1]
+// }
+
+// alert(`New Array: ${newArray}`);
+
+//Q21:- Write a program to skip two elements after the occurrence of an odd number and print the array elements in the following pattern
+
+/*
+
+* *
+*
+*
+*
+* * * *
+*
+*
+*
+*
+*
+*
+* * * * * *
+
+*/
+for(let i=1;i<=3;i++){
+    for(let j=1;j<=i*2;j++){
+        process.stdout.write(` *`)
     }
+    console.log("")
+    if (i < 3) {
+        for (let k = 1; k <= 3*i; k++){
+            console.log(" *")
+        }
+    }
+    
 }
 
-for(let i = 0;i<arraySize;i++){
-    for(let j = 0 ;j<arraySize;j++){
-        array2[i][j] = prompt(` Enter the ${i+1}st element of the second array`);
+//Q21:- Write a program to skip two elements after the occurrence of an odd number and print the array elements in the following pattern
+
+/*
+
+* *
+*
+*
+*
+* * * *
+*
+*
+*
+*
+*
+*
+* * * * * *
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+
+*/
+
+let l=0;
+for(let i=1;i<=3;i++){
+    for(let j=1;j<=i*2;j++){
+        process.stdout.write(` *`)
     }
+    console.log("")
+    l=3
+    for (let k = 1; k <= l; k++){
+        console.log(" *")
+        l=l+l;
+    }
+    
 }
 
-console.log(array1);
-console.log(array2);
+ 
+
+
+
+
+
+
+
+
+
 
 
 
