@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+
+<script>
+//Q1:- Accept a char input from the user and display it on the console.
+
+//Ans:
+// const char = prompt("Enter  a char to print");
+// console.log(char)
+
+//Q2:-Accept two inputs from the user and output its sum.
+
+//Ans:
+// const num1 = parseInt(prompt("Enter a integer  number"));
+// const num2 = parseFloat(prompt("Enger a floating number"));
+// const sum = num1+num2;
+
+// console.log(typeof sum);
+
+//Q3:- Write a program tofindthe simple interest.
+//The program should accept 3 inputs from the user and calculate simple interest for the given inputs. Formula: SI=(P*R*n)/100)
+
+//Ans:
+// const principal = parseInt(prompt("Enter the principal amount"));
+// const interest = parseFloat(prompt("Enter the interest rate"));
+// const years = parseFloat(prompt("Enter the number of year of investment"));
+
+// const simpleInterest = (principal*interest*years)/100
+
+// console.log("Simple interest is:",simpleInterest);
+
+//Q4:- Write a program to check whether a student has passed or failed in a subject after he or she 
+// enters their mark (pass mark for a subject is 50 out of 100).
+
+//a. The program should accept input from the user and output a message as “Passed” or “Failed.”
+
+//Ans:
+
+// const mark = parseInt(prompt("Enter your mark to find passwed or fialed"));
+// if(isNaN(mark)){
+//     console.log("Please enter a number");
+// }
+// else if(mark>=50 && mark<=100){
+//     console.log("Your are passed!")
+// }else if(mark<0||mark>100){
+//     console.log("Please enter the mark properly");
+// }else{
+//     console.log("You are failed!");
+// }
+
+//Q5:- Wreite a program to show the grade obtained by a student after they enter their total  mark percentage.
+
+/*
+Grade>90 - A
+80-89 - B
+70-79 - C
+60-69 - D
+50-59 - E
+Grade< 50 - Failed
+*/
+//Ans:
+// const input = (prompt("Enter your mark percenatage to check the grade")).trim();
+// const mark = Number(input);
+
+// if( input === "" || Number.isNaN(mark)){
+//     console.log("Please enter proper number value.");
+// }else if(mark>100 || mark<0){
+//     console.log("Please enter proper mark in between 0 to 100");
+// }else if(mark>=90){
+//     console.log("You got A Grade!")
+// }else if( mark>=80){
+//     console.log("You got B Grade!");
+// }else if(mark>=70){
+//     console.log("you got C Grade!")
+// }else if(mark>=60){
+//     console.log("You got a D Grade!");
+// }else if(mark>=50){
+//     console.log("You got a E Grade!");
+// }else{
+//     console.log("You are failed!");
+// }
+
+//Q6:- Using the switch case write a program to accept an input number from the user and output the day as follows.
+
+//1- Monday
+//2- Tuesday
+//3- Wednesday
+//4- Thursday
+//5- Friday
+//6- Saturday
+//7- Sunday
+
+//Ans:
+
+// const input = prompt("Enter a number from 1 to 7");
+// const number = Number(input);
+
+// switch(number){
+//     case 1:
+//         console.log("Monday");
+//         break;
+//     case 2:
+//         console.log("Tuesday");
+//         break;
+//     case 3:
+//         console.log("Wednesday");
+//         break;
+//     case 4:
+//         console.log("Thursday");
+//         break;
+//     case 5:
+//         console.log("Friday");
+//         break;
+//     case 6:
+//         console.log("Saturday");
+//         break;
+//     case 7:
+//         console.log("Sunday");
+//         break;
+//     default:
+//         console.log("Please enter a number from 1 to 7");
+//         break;
+// }
+
+//Q7:- Write a program to print the multiplication table of the given number.
+
+//Ans:
+
+// const number  = prompt("Enter a number to print its multiplication table");
+// const num = Number(number);
+
+// for(let i = 1;i<=10;i++){
+//     console.log(`${i}x${num}=${i*num}`);
+// }
+
+//Q8:- Write a program to find the sum of all the odd numbers for a given limit.
+
+//Ans:
+
+// const limit = prompt("Enter the limit to find odd numbers in it").trim();
+// const num= parseInt(limit);
+
+// let sum = 0;
+// for(let i=1;i<=limit;i++){
+//     if(i%2===1){
+//         sum+=i
+//     }
+// }
+
+// console.log(sum);
+
+//Q9:- write a program to printt the below pattern (use nested loops)
+
+//1
+//1 2
+//1 2 3
+//1 2 3 4
+//1 2 3 4 5
+
+//Ans:
+
+// for(let i=1;i<=5;i++){
+//     for(let j=1;j<=i;j++){
+//         process.stdout.write(` ${j}`);
+//     }
+//     console.log("\n");
+// }
+
+//Q10:- Write a program to interchange the values of two arrays. for that accept the size of array for each and element of each array.
+
+//Ans:
+
+// const arr1Size = prompt("Enter the first array size: ");
+// const arr2Size = prompt("Enter the second array size: ");
+// let array1 = [];
+// let  array2 = [];
+// for(let i = 1;i<=arr1Size;i++){
+//     array1.push(prompt(`Enter the ${i}st element of the first array`));
+// }
+// for(let i = 1;i<=arr2Size;i++){
+//     array2.push(prompt(`Enter the ${i}st element of the second array`));
+// }
+
+// const temp = array1
+// array1 = array2
+// array2 = temp;
+
+// console.log("first array",array1,"/n","second array",array2);
+
+//Q11:-  Write a program to find the number of even numbers in an array
+
+//Ans:
+
+// const arr1Size = prompt("Enter the array size: ");
+// const array1 = [];
+// for(let i = 1;i<=arr1Size;i++){
+//     array1.push(prompt(`Enter the ${i}st element of the array`));
+// }
+// let count = 0;
+// for(let i = 0 ;i<arr1Size;i++){
+//     if(array1[i]%2===0){
+//         count++;
+//     }
+// }
+
+// console.log(count);
+
+//Q12:- Write a program to sort an array in descending order.
+
+//Ans:
+// const array = [20,10,50,30,40];
+
+// for(let i=0;i<array.length;i++){
+//     for(let j=i+1; j<array.length;j++){
+//         if(array[i]<array[j]){
+//             let temp = array[i];
+//             array[i]=array[j];
+//             array[j]=temp
+//         }       
+//     }
+
+// }
+// console.log(array);
+
+//Q13:- Write a program to identify whether a string is palindrome or not.
+
+//Ans:
+
+// let str = prompt("Please enter your word to check if it is a palindrome or not: ").trim();
+// str = str.toLocaleLowerCase();
+
+// if(str===(str.split("").reverse().join(""))){
+//     console.log("The string is palindrom")
+// }else{
+//     console.log("The string is not palindrom");
+// }
+
+//Q14: Write a program to add two dimensional arrays.
+const arraySize = prompt("Enter the size of the both 2D arrays: ");
+const array1 = [];
+const array2 = [];
+
+for(let i = 0;i<arraySize;i++){
+    for(let j = 0 ;j<arraySize;j++){
+        array1[i][j] = prompt(` Enter the ${i+1}st element of the first array`);       
+    }
+}
+
+for(let i = 0;i<arraySize;i++){
+    for(let j = 0 ;j<arraySize;j++){
+        array2[i][j] = prompt(` Enter the ${i+1}st element of the second array`);
+    }
+}
+
+console.log(array1);
+console.log(array2);
+
+
+
+</script>
+</body>
+</html>
+
+
