@@ -56,8 +56,108 @@
 //     }
 // }
 
-//Q3:- Write a program to print the following pattern
+//Q3:- write a menu driven program to perform following operations without using library functions.
+//1. String length
+//2. String Concatenation
+//3. String Reverse
 
+// const str1 = "Akhil";
+// const str2 = "Balan";
+// console.log("String1 length",str1.length);
+// console.log("String2 length",str2.length);
+// console.log("Concatenated String", str1.concat(str2));
+// const reversed = str1.concat(str2)
+// console.log("String reversed:", reversed.split("").reverse().join(""));
+
+//Q4:- Read some word and sort it.
+
+// const word = ["d","a","c","b"];
+
+// for(let i = 0;i<word.length-1;i++){
+//     for(let j = i+1;j<word.length;j++){
+//         if(word[i]>word[j]){
+//            let temp =  word[i]
+//            word[i] = word[j]
+//            word[j] = temp
+//         }
+//     }
+
+// }
+
+// console.log(word);
+
+//Q4:- find position of the word from a sentence.
+
+// const sentence = "India is my contry";
+
+// const wordArray = sentence.split(" ");
+// let position = 0;
+// for(let i=0;i<wordArray.length;i++){
+//     if(wordArray[i]==="is"){
+//         position = i+1
+//         break;
+//     }
+// }
+
+// console.log("Position of the word 'is' is at :",position);
+
+//Q5:-  Write a program to print the following pattern
+
+/*
+            A 
+          A B A 
+        A B C B A 
+      A B C D C B A 
+
+*/
+// const size=4;
+// for(let i=0;i<size;i++ ){
+//     for(let j=size;j>1+i;j--){
+//         process.stdout.write("  ");
+//     }
+//     for(let k=0;k<=i;k++){
+//         process.stdout.write(` ${String.fromCharCode(65+k)}`);
+//     }
+//     for (let l = i-1; l > 0; l--){
+//         process.stdout.write(` ${String.fromCharCode(65+l)}`);
+//     }
+//     console.log("");
+
+// }
+
+//Q6:- Write a program to print following pattern.
+
+/*
+
+*                                     *
+* *                                 * *
+* * *                             * * *
+* * * *                         * * * *
+* * * * *                     * * * * *
+* * * * * *                 * * * * * *
+* * * * * * *             * * * * * * *
+* * * * * * * *         * * * * * * * *
+* * * * * * * * *     * * * * * * * * *
+* * * * * * * * * * * * * * * * * * * *
+
+*/
+const size = 10;
+for (let i = 1; i <= size; i++){
+    for (let j = 1; j <= i; j++){
+        process.stdout.write(" *");
+    }
+    for (let k = size - 1; k >= i; k--){
+        process.stdout.write("  ");
+    }
+    for (let l = size - 1; l >= i; l--){
+        process.stdout.write("  ");
+    }
+     for (let m = 1; m <= i; m++){
+        process.stdout.write(" *");
+    }
+    
+    console.log("");
+}
 
 </script>
 </body>
